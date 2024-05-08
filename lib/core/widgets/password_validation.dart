@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:med_voy/core/helpers/spacing.dart';
-import 'package:med_voy/features/login/ui/widgets/build_validation_row_widget.dart';
+import 'package:med_voy/core/widgets/build_validation_row_widget.dart';
 import 'package:med_voy/resources/app_string.dart';
 
 class PasswordValidation extends StatelessWidget {

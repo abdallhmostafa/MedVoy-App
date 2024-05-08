@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+// ignore: depend_on_referenced_packages
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class DioFactory{
   /// This is Private Constructor to  Prevent an Creating an Instance of this class

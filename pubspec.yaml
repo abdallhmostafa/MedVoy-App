@@ -16,7 +16,7 @@ dependencies:
   flutter_bloc: ^8.1.4
 #  Code Generator and Annotation For Freezed-code Generation
   freezed: ^2.4.6
-  freezed_annotation: ^2.4.1
+  lottie: ^3.0.0
 
 #  for Dependency injection
   get_it: ^7.6.7
@@ -35,6 +35,7 @@ dependencies:
   flutter_svg: ^2.0.9
 #  A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
   flutter_screenutil: ^5.9.0
+  firebase_core: ^2.27.0
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +43,8 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
   build_runner: ^2.4.8
+  freezed_annotation: ^2.4.1
+
 #  Automatically generate code for converting to and from JSON by annotating Dart classes.
   json_serializable: ^6.7.1
 #  A dio client generator using source_gen to help retrofit package
@@ -55,6 +58,7 @@ flutter:
   assets:
     - assets/svgs/
     - assets/images/
+    - assets/json/
 
   # fonts:
   #   - family: Schyler

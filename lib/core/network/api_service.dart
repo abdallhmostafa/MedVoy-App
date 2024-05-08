@@ -2,6 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:med_voy/core/network/api_constant.dart';
 import 'package:med_voy/features/login/data/model/login_request_body.dart';
 import 'package:med_voy/features/login/data/model/login_response.dart';
+import 'package:med_voy/features/sign_up/data/model/sign_up_request.dart';
+import 'package:med_voy/features/sign_up/data/model/sign_up_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_service.g.dart';
@@ -13,5 +15,10 @@ abstract class ApiService {
   @POST(ApiConstant.login)
   Future<LoginResponse> login(
     @Body() LoginRequestBody loginRequestBody,
+  );
+
+  @POST(ApiConstant.register)
+  Future<SignUpResponse> signUp(
+    @Body() SignUpRequest signUpRequest,
   );
 }

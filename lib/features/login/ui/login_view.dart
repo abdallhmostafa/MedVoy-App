@@ -11,7 +11,7 @@ class LoginView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 30.h, horizontal: 30.w),
-          child:LoginBodyScreen(),
+          child: const LoginBodyScreen(),
         ),
       ),
     );

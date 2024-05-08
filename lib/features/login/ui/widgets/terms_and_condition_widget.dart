@@ -9,14 +9,15 @@ class TermsAndConditionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
         textAlign: TextAlign.center,
-        text: TextSpan(
-
-      children: [
-        TextSpan(text: AppString.byLogging,style: AppStyle.f13GrayRegular),
-        TextSpan(text: AppString.termsAndConditions,style: AppStyle.f13DarkBlueW500),
-        TextSpan(text: AppString.and,style: AppStyle.f13GrayRegular),
-        TextSpan(text: AppString.privacyPolicy,style: AppStyle.f13DarkBlueW500.copyWith(height: 1.6)),
-      ]
-    ));
+        text: TextSpan(children: [
+          TextSpan(text: AppString.byLogging, style: AppStyle.f13GrayRegular),
+          TextSpan(
+              text: AppString.termsAndConditions,
+              style: AppStyle.f13DarkBlueW500),
+          TextSpan(text: AppString.and, style: AppStyle.f13GrayRegular),
+          TextSpan(
+              text: AppString.privacyPolicy,
+              style: AppStyle.f13DarkBlueW500.copyWith(height: 1.6)),
+        ]));
   }
 }

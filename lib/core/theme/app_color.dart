@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
-class AppColor{
-  static const Color primaryBlue= Color(0xFF247CFF);
-  static const Color gray= Color(0xFF757575);
-  static const Color darkBlue= Color(0xFF242424);
-  static const Color lighterGray= Color(0xFFEDEDED);
-  static const Color lightGray= Color(0xFFC2C2C2);
-  static const Color veryLightGray= Color(0xFFFDFDFF);
-  static const Color white= Colors.white;
-  static const Color black= Colors.black;
+class AppColor {
+  AppColor._();
+  static const Color primaryBlue = Color(0xFF247CFF);
+  static const Color gray = Color(0xFF757575);
+  static const Color darkBlue = Color(0xFF242424);
+  static const Color lighterGray = Color(0xFFEDEDED);
+  static const Color lightGray = Color(0xFFC2C2C2);
+  static const Color veryLightGray = Color(0xFFFDFDFF);
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
+  static const Color red = Colors.red;
+  static const Color green = Colors.green;
 
-
- static MaterialColor getMaterialColor(Color color) {
+  static MaterialColor getMaterialColor(Color color) {
     final int red = color.red;
     final int green = color.green;
     final int blue = color.blue;
@@ -32,4 +34,3 @@ class AppColor{
     return MaterialColor(color.value, shades);
   }
 }
-

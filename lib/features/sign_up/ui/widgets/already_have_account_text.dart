@@ -22,7 +22,7 @@ class AlreadyHaveAccountWidget extends StatelessWidget {
           TextSpan(
               text: AppString.alreadyHaveAccount,
               style: AppStyle.f13DarkBlueW400),
-          TextSpan(text: AppString.signUp, style: AppStyle.f13BlueW600)
+          TextSpan(text: AppString.login, style: AppStyle.f13BlueW600)
         ]),
       ),
     );
