@@ -8,6 +8,6 @@ class AppCustomLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Lottie.asset(AppAssets.loading, height: 250.h));
+    return Center(child: Lottie.asset(AppAssets.loadingJson, height: 250.h));
   }
 }

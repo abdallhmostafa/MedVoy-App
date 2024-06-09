@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:med_voy/features/sign_up/data/model/sign_up_request.dart';
-import 'package:med_voy/features/sign_up/data/repo/sign_up_repo_impl.dart';
-import 'package:med_voy/features/sign_up/logic/sign_up_state.dart';
+import 'package:med_voy/features/auth/sign_up/data/model/sign_up_request.dart';
+import 'package:med_voy/features/auth/sign_up/data/repo/sign_up_repo_impl.dart';
+import 'package:med_voy/features/auth/sign_up/logic/sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
   SignUpCubit(this._signUpRepoImpl) : super(const SignUpState.initial());

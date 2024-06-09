@@ -5,7 +5,7 @@ import 'package:med_voy/core/helpers/spacing.dart';
 import 'package:med_voy/core/theme/app_color.dart';
 import 'package:med_voy/core/widgets/app_text_form_field.dart';
 import 'package:med_voy/core/widgets/password_validation.dart';
-import 'package:med_voy/features/sign_up/logic/sign_up_cubit.dart';
+import 'package:med_voy/features/auth/sign_up/logic/sign_up_cubit.dart';
 import 'package:med_voy/resources/app_string.dart';
 
 class SignUpForm extends StatefulWidget {

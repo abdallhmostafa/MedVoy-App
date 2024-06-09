@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:med_voy/core/helpers/extension.dart';
 import 'package:med_voy/core/widgets/app_custom_error.dart';
 import 'package:med_voy/core/widgets/app_custom_loading.dart';
-import 'package:med_voy/features/sign_up/logic/sign_up_cubit.dart';
-import 'package:med_voy/features/sign_up/logic/sign_up_state.dart';
-import 'package:med_voy/features/sign_up/ui/widgets/build_on_success_widget.dart';
+import 'package:med_voy/features/auth/sign_up/logic/sign_up_cubit.dart';
+import 'package:med_voy/features/auth/sign_up/logic/sign_up_state.dart';
+import 'package:med_voy/features/auth/sign_up/ui/widgets/build_on_success_widget.dart';
 
 class BuildSignUpBlocListener extends StatelessWidget {
   const BuildSignUpBlocListener({Key? key}) : super(key: key);

@@ -14,7 +14,7 @@ class BuildOnSuccessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      icon: Lottie.asset(AppAssets.success, width: 100.w, height: 100.h),
+      icon: Lottie.asset(AppAssets.successJson, width: 100.w, height: 100.h),
       backgroundColor: AppColor.white,
       // title: Text(
       //   AppString.signUpSuccess,

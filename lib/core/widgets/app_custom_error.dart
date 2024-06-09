@@ -14,7 +14,7 @@ class AppCustomError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      icon: Lottie.asset(AppAssets.error, width: 100.w, height: 100.h),
+      icon: Lottie.asset(AppAssets.errorJson, width: 100.w, height: 100.h),
       backgroundColor: AppColor.white,
       content: Text(
         errorMessage,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:med_voy/core/helpers/spacing.dart';
 import 'package:med_voy/core/theme/app_color.dart';
 import 'package:med_voy/core/theme/app_style.dart';
-import 'package:med_voy/features/login/ui/widgets/do_not_have_account.dart';
-import 'package:med_voy/features/login/ui/widgets/terms_and_condition_widget.dart';
+import 'package:med_voy/features/auth/login/ui/widgets/do_not_have_account.dart';
+import 'package:med_voy/features/auth/login/ui/widgets/terms_and_condition_widget.dart';
 
-import '../../../../core/widgets/custom_button.dart';
-import '../../../../resources/app_string.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../../../resources/app_string.dart';
 import 'build_login_bloc_listener.dart';
 import 'build_validate_and_login.dart';
 import 'email_and_password.dart';

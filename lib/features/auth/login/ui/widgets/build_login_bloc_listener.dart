@@ -4,9 +4,9 @@ import 'package:med_voy/core/helpers/extension.dart';
 import 'package:med_voy/core/route/routes.dart';
 import 'package:med_voy/core/widgets/app_custom_error.dart';
 import 'package:med_voy/core/widgets/app_custom_loading.dart';
-import 'package:med_voy/features/login/logic/cubit/login_cubit.dart';
-import 'package:med_voy/features/login/logic/cubit/login_state.dart';
-
+import 'package:med_voy/features/auth/login/logic/cubit/login_cubit.dart';
+import 'package:med_voy/features/auth/login/logic/cubit/login_state.dart';
+ 
 class BuildLoginBlocListener extends StatelessWidget {
   const BuildLoginBlocListener({super.key});
 

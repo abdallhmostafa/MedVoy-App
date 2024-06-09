@@ -4,11 +4,11 @@ import 'package:med_voy/core/di/dependency_injection.dart';
 import 'package:med_voy/core/route/custom_route_animation.dart';
 import 'package:med_voy/core/route/routes.dart';
 import 'package:med_voy/features/home/presentation/home_view.dart';
-import 'package:med_voy/features/login/logic/cubit/login_cubit.dart';
-import 'package:med_voy/features/login/ui/login_view.dart';
+import 'package:med_voy/features/auth/login/logic/cubit/login_cubit.dart';
+import 'package:med_voy/features/auth/login/ui/login_view.dart';
 import 'package:med_voy/features/on%20boarding/ui/on_boarding_view.dart';
-import 'package:med_voy/features/sign_up/logic/sign_up_cubit.dart';
-import 'package:med_voy/features/sign_up/ui/sign_up_view.dart';
+import 'package:med_voy/features/auth/sign_up/logic/sign_up_cubit.dart';
+import 'package:med_voy/features/auth/sign_up/ui/sign_up_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {

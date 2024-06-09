@@ -4,6 +4,11 @@ import 'package:med_voy/core/helpers/app_font_weight.dart';
 import 'package:med_voy/core/theme/app_color.dart';
 
 class AppStyle {
+    static TextStyle f12GrayRegular = TextStyle(
+    fontSize: 12.sp,
+    // overflow: TextOverflow.ellipsis,
+    color: AppColor.gray,
+  );
   static TextStyle f13GrayRegular = TextStyle(
     fontSize: 13.sp,
     // overflow: TextOverflow.ellipsis,
@@ -52,6 +57,11 @@ class AppStyle {
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
     color: AppColor.white,
+  );
+   static TextStyle f18DarkBlueW700 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColor.darkBlue,
   );
   static TextStyle f24BlackW700 = TextStyle(
     fontWeight: FontWeight.w700,

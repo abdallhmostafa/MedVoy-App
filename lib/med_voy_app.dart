@@ -36,7 +36,7 @@ class MedVoyApp extends StatelessWidget {
         title: 'MedVoy',
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.homeScreen,
       ),
     );
   }

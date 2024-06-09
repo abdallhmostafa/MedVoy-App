@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:med_voy/features/login/data/model/login_request_body.dart';
-import 'package:med_voy/features/login/data/repos/login_repo_impl.dart';
+import 'package:med_voy/features/auth/login/data/model/login_request_body.dart';
+import 'package:med_voy/features/auth/login/data/repos/login_repo_impl.dart';
 
 import 'login_state.dart';
 

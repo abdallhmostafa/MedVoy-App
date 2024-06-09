@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:med_voy/features/login/ui/widgets/login_body.dart';
+import 'package:med_voy/features/auth/login/ui/widgets/login_body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

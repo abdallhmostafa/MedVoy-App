@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:med_voy/core/helpers/spacing.dart';
 import 'package:med_voy/core/theme/app_style.dart';
 import 'package:med_voy/core/widgets/custom_button.dart';
-import 'package:med_voy/features/login/ui/widgets/terms_and_condition_widget.dart';
-import 'package:med_voy/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
-import 'package:med_voy/features/sign_up/ui/widgets/sign_up_form.dart';
+import 'package:med_voy/features/auth/login/ui/widgets/terms_and_condition_widget.dart';
+import 'package:med_voy/features/auth/sign_up/ui/widgets/sign_up_bloc_listener.dart';
+import 'package:med_voy/features/auth/sign_up/ui/widgets/sign_up_form.dart';
 import 'package:med_voy/resources/app_string.dart';
 
 import 'already_have_account_text.dart';

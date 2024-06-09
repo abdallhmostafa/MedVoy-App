@@ -1,9 +1,9 @@
 import 'package:med_voy/core/network/api_error_handler.dart';
 import 'package:med_voy/core/network/api_result.dart';
 import 'package:med_voy/core/network/api_service.dart';
-import 'package:med_voy/features/sign_up/data/model/sign_up_request.dart';
-import 'package:med_voy/features/sign_up/data/model/sign_up_response.dart';
-import 'package:med_voy/features/sign_up/data/repo/sign_up_repo.dart';
+import 'package:med_voy/features/auth/sign_up/data/model/sign_up_request.dart';
+import 'package:med_voy/features/auth/sign_up/data/model/sign_up_response.dart';
+import 'package:med_voy/features/auth/sign_up/data/repo/sign_up_repo.dart';
 
 class SignUpRepoImpl extends SignUpRepo {
   final ApiService _apiService;
