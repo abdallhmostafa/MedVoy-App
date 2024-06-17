@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: unused_element
-
 part of 'sign_up_request.dart';
 
 // **************************************************************************
@@ -15,7 +13,7 @@ SignUpRequest _$SignUpRequestFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String,
       password: json['password'] as String,
       phone: json['phone'] as String,
-      gender: json['gender'] as int,
+      gender: (json['gender'] as num).toInt(),
     );
 
 Map<String, dynamic> _$SignUpRequestToJson(SignUpRequest instance) =>
