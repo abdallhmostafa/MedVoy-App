@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:med_voy/core/di/dependency_injection.dart';
 import 'package:med_voy/core/route/custom_route_animation.dart';
 import 'package:med_voy/core/route/routes.dart';
+import 'package:med_voy/features/home/data/repo/home_specialization_repo.dart';
+import 'package:med_voy/features/home/logic/home_cubit.dart';
 import 'package:med_voy/features/home/presentation/home_view.dart';
 import 'package:med_voy/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:med_voy/features/auth/login/ui/login_view.dart';
@@ -17,7 +19,12 @@ class AppRouter {
       case Routes.onBoardingScreen:
         return CustomRouteAnimation(child: const OnBoardingView());
       case Routes.homeScreen:
-        return CustomRouteAnimation(child: const HomeView());
+        return CustomRouteAnimation(
+            child: BlocProvider(
+          create: (context) =>
+              HomeCubit(getIt<HomeSpecializationRepo>())..getSpecialization(),
+          child: const HomeView(),
+        ));
 
       case Routes.loginScreen:
         return CustomRouteAnimation(

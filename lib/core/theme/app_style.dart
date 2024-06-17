@@ -8,10 +8,11 @@ class AppStyle {
     fontSize: 12.sp,
     color: AppColor.gray,
   );
-   static TextStyle f12GrayW500 = TextStyle(
+  static TextStyle f12GrayW500 = TextStyle(
     fontSize: 12.sp,
     color: AppColor.gray,
     fontWeight: AppFontWeight.w500,
+    overflow: TextOverflow.ellipsis,
   );
   static TextStyle f12DarkBlueRegular = TextStyle(
     fontSize: 12.sp,
@@ -74,6 +75,7 @@ class AppStyle {
     fontSize: 16.sp,
     fontWeight: FontWeight.w700,
     color: AppColor.darkBlue,
+    overflow: TextOverflow.ellipsis,
   );
   static TextStyle f18DarkBlueW700 = TextStyle(
     fontSize: 18.sp,
