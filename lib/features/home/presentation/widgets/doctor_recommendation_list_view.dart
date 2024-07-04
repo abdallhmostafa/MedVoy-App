@@ -7,7 +7,7 @@ import 'package:med_voy/features/home/presentation/widgets/doctor_recommendation
 class DoctorRecommendationListView extends StatelessWidget {
   const DoctorRecommendationListView(
       {super.key, required this.doctorsList});
-  final List<Doctors>? doctorsList;
+  final List<Doctors?>? doctorsList;
 
   @override
   Widget build(BuildContext context) {

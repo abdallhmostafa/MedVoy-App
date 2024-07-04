@@ -11,8 +11,9 @@ HomeSpecializationResponse _$HomeSpecializationResponseFromJson(
     HomeSpecializationResponse(
       message: json['message'] as String?,
       specializationDataList: (json['data'] as List<dynamic>?)
-          ?.map(
-              (e) => SpecializationDataList.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => e == null
+              ? null
+              : SpecializationDataList.fromJson(e as Map<String, dynamic>))
           .toList(),
       status: json['status'] as bool?,
       code: (json['code'] as num?)?.toInt(),

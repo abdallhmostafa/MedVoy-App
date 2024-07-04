@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:med_voy/core/helpers/app_constant.dart';
 import 'package:med_voy/core/route/app_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:med_voy/core/route/routes.dart';
 import 'package:med_voy/core/theme/app_color.dart';
 
 class MedVoyApp extends StatelessWidget {
-  const MedVoyApp({super.key, required this.appRouter});
+  const MedVoyApp({super.key, required this.appRouter, });
 
   final AppRouter appRouter;
 
@@ -36,7 +37,7 @@ class MedVoyApp extends StatelessWidget {
         title: 'MedVoy',
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.homeScreen,
+        initialRoute: isLoggedIn ? Routes.homeScreen: Routes.loginScreen,
       ),
     );
   }

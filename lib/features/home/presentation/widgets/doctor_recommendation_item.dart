@@ -1,7 +1,4 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:med_voy/core/helpers/spacing.dart';
 import 'package:med_voy/core/theme/app_color.dart';
@@ -20,26 +17,37 @@ class DoctorRecommendationItem extends StatelessWidget {
         children: [
           Expanded(
               flex: 2,
-              child: CachedNetworkImage(
-                  imageUrl: doctor?.photo ?? "",
+              //  (doctor?.photo == null || doctor?.photo == '')?
+              child: Container(
+                margin: EdgeInsets.only(right: 16.w),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(12.r)),
+                ),
+                child: Image.asset(
+                  AppAssets.homeRecommendationDoctor1,
                   fit: BoxFit.cover,
-                  fadeInDuration: Duration(milliseconds: 250),
-                  
-                  errorWidget: (context, url, error) => Image.asset(
-                        AppAssets.homeRecommendationDoctor1,
-                        fit: BoxFit.cover,
-                      ),
-                  imageBuilder: (context, imageProvider) {
-                    return Container(
-                      margin: EdgeInsets.only(right: 16.w),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(12.r)),
-                      ),
-                    );
-                  },
-                  placeholder: (context, url) => const Center(
-                        child: CircularProgressIndicator(),
-                      ))),
+                ),
+              )
+              // : CachedNetworkImage(
+              //     imageUrl: doctor!.photo!,
+              //     fit: BoxFit.cover,
+              //     fadeInDuration: const Duration(milliseconds: 250),
+              //     errorWidget: (context, url, error) => Container(
+              //       margin: EdgeInsets.only(right: 16.w),
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.all(Radius.circular(12.r)),
+              //       ),
+              //       child: Image.asset(
+              //         AppAssets.homeRecommendationDoctor1,
+              //         fit: BoxFit.cover,
+              //       ),
+              //     ),
+              //     placeholder: (context, url) => const Center(
+              //       child: CircularProgressIndicator(),
+              //     ),
+              //   ),
+              ),
+          horizontalSpace(15),
           Expanded(
             flex: 3,
             child: Column(

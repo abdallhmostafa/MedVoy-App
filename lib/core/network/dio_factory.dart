@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:med_voy/core/helpers/app_constant.dart';
+import 'package:med_voy/core/helpers/shared_pref_helper.dart';
 // ignore: depend_on_referenced_packages
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -8,8 +10,8 @@ class DioFactory {
 
   static Dio? dio;
 // Todo: Omer ahmed convert this func return to Dio withOut Future and async
-  static Future<Dio> getDio() async {
-    Duration timeout = const Duration(seconds: 30);
+  static Dio getDio() {
+    Duration timeout = const Duration(seconds: 7);
 
     if (dio == null) {
       dio = Dio();
@@ -28,7 +30,14 @@ class DioFactory {
     dio?.options.headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzE4NjQwMzI5LCJleHAiOjE3MTg3MjY3MjksIm5iZiI6MTcxODY0MDMyOSwianRpIjoiSGR0VDlUVXJXTVFwcFo2RSIsInN1YiI6IjEyODkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.QTdE8p0HTET1FSjZOsa4RpCK82g4LB27t6zsVw87ZQE',
+      // 'Authorization': 'Bearer ${SharePrefHelper.getSecuredString(SharedPrefsKey.userToken)}',
+      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzIwMTIyMjIzLCJleHAiOjE3MjAyMDg2MjMsIm5iZiI6MTcyMDEyMjIyMywianRpIjoidVdjSnZ4b0ZIVVdCQ1prOSIsInN1YiI6IjEyODkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ZfSnPXaLm1DxgZpZQIRXmUsi09Q4JN4V8iZCrn8V1dI',
+    };
+  }
+
+  static Future<void> setIntoTokenAfterLogin(String token) async {
+    dio?.options.headers = {
+      'Authorization': 'Bearer $token',
     };
   }
 

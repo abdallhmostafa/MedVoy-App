@@ -20,6 +20,8 @@ class AppAssets {
   static const String homeRadiologyIcon = '$_svgUrl/home_radiology_icon.svg';
   static const String notificationIcon = '$_svgUrl/notification.svg';
   static const String onBoardingBackground = '$_svgUrl/background_logo.svg';
+  static const String specializationSvg = '$_svgUrl/specialization_svg.svg';
+  static const String specializationSvgTwo = '$_svgUrl/specialization_svg_2.svg';
 
   // ----------------  Json Assets ----------------
   static const String loadingJson = '$_jsonUrl/loading.json';

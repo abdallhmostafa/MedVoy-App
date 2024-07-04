@@ -5,7 +5,7 @@ part 'home_specialization_response.g.dart';
 class HomeSpecializationResponse {
   String? message;
   @JsonKey(name: 'data')
-  List<SpecializationDataList>? specializationDataList;
+  List<SpecializationDataList?>? specializationDataList;
   bool? status;
   int? code;
 
