@@ -5,7 +5,8 @@ import 'package:med_voy/core/utilities/set_or_else_state.dart';
 import 'package:med_voy/features/home/data/model/home_specialization_response.dart';
 import 'package:med_voy/features/home/logic/home_cubit.dart';
 import 'package:med_voy/features/home/logic/home_state.dart';
-import 'package:med_voy/features/home/presentation/widgets/doctor_recommendation_list_view.dart';
+import 'package:med_voy/features/home/presentation/widgets/doctor_list/doctor_recommendation_list_view.dart';
+import 'package:med_voy/features/home/presentation/widgets/doctor_list/doctor_shimmer_loading.dart';
 
 class DoctorRecommendedBlocBuilder extends StatelessWidget {
   const DoctorRecommendedBlocBuilder({super.key});
@@ -14,9 +15,12 @@ class DoctorRecommendedBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is DoctorSuccess || current is DoctorError,
+          current is DoctorSuccess ||
+          current is DoctorError ||
+          current is SpecializationLoading,
       builder: (context, state) {
         return state.maybeWhen(
+          specializationLoading: () => const DoctorShimmerLoading(),
           doctorSuccess: (doctorsList) {
             return setSuccess(doctorsList);
           },
@@ -35,5 +39,3 @@ Widget setSuccess(List<Doctors?>? doctorsList) {
     ),
   );
 }
-
-

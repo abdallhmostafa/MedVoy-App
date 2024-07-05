@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:med_voy/core/helpers/spacing.dart';
 import 'package:med_voy/features/home/presentation/widgets/doctor_container.dart';
-import 'package:med_voy/features/home/presentation/widgets/doctor_recommended_bloc_builder.dart';
+import 'package:med_voy/features/home/presentation/widgets/doctor_list/doctor_recommended_bloc_builder.dart';
 import 'package:med_voy/features/home/presentation/widgets/home_custom_see_all.dart';
 import 'package:med_voy/features/home/presentation/widgets/home_top_bar.dart';
-import 'package:med_voy/features/home/presentation/widgets/specialization_recommended_bloc_builder.dart';
+import 'package:med_voy/features/home/presentation/widgets/specialization_list/specialization_recommended_bloc_builder.dart';
 
 class HomeBodyScreen extends StatelessWidget {
   const HomeBodyScreen({super.key});

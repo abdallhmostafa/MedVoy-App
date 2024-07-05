@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:med_voy/features/home/data/model/home_specialization_response.dart';
-import 'package:med_voy/features/home/presentation/widgets/doctor_recommendation_item.dart';
+import 'package:med_voy/features/home/presentation/widgets/doctor_list/doctor_recommendation_item.dart';
 
 class DoctorRecommendationListView extends StatelessWidget {
   const DoctorRecommendationListView(

@@ -9,11 +9,7 @@ import 'package:med_voy/resources/app_assets.dart';
 
 class SpecialityItem extends StatelessWidget {
   const SpecialityItem(
-      {super.key,
-      required this.assetName,
-      required this.title,
-      this.isSelected = false});
-  final String assetName;
+      {super.key, required this.title, this.isSelected = false});
   final String title;
   final bool isSelected;
   @override
@@ -22,14 +18,15 @@ class SpecialityItem extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         isSelected
-            ? Container(
+            ? AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: AppColor.primaryBlue, width: 2),
                 ),
                 child: CircleAvatar(
                   backgroundColor: AppColor.colorF4F8FF,
-                  radius: 32,
+                  radius: 31,
                   child: SvgPicture.asset(
                     AppAssets.specializationSvg,
                     width: 40.w,
@@ -40,7 +37,8 @@ class SpecialityItem extends StatelessWidget {
             : CircleAvatar(
                 backgroundColor: AppColor.colorF4F8FF,
                 radius: 30,
-                child: SvgPicture.asset(AppAssets.specializationSvg),
+                child: SvgPicture.asset(AppAssets.specializationSvgTwo,
+                    width: 40.w, height: 40.h),
               ),
         verticalSpace(6),
         Text(title,

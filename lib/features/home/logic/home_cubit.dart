@@ -8,6 +8,7 @@ import 'package:med_voy/features/home/logic/home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this._homeSpecializationRepo) : super(const HomeState.initial());
   final HomeSpecializationRepo _homeSpecializationRepo;
+  int selectedSpecializationInedx = 0;
 
   List<SpecializationDataList?>? specializationDataList = [];
   Future<void> getSpecialization() async {
@@ -16,11 +17,9 @@ class HomeCubit extends Cubit<HomeState> {
     result.when(
       success: (specializationResponse) {
         specializationDataList = specializationResponse.specializationDataList;
-        // get the first Doctors list by specialization id 1
-        getDoctorsList(
-            specializationId: specializationDataList?.first?.id ?? 1);
-        emit(HomeState.specializationSuccess(specializationDataList
-        ));
+        // get the first Doctors list by specialization first id
+        getDoctorsList(specializationId: specializationDataList?.first?.id);
+        emit(HomeState.specializationSuccess(specializationDataList));
       },
       failure: (errorHandler) {
         emit(HomeState.specializationError(errorHandler: errorHandler));
@@ -30,7 +29,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   getDoctorsList({int? specializationId}) {
     final List<Doctors>? doctorList =
-        filterSpecializationListByID(specializationId: specializationId??0);
+        filterSpecializationListByID(specializationId: specializationId ?? 1);
     if (doctorList.isNullOrEmpty) {
       emit(HomeState.doctorError(
           ErrorHandler.handle('Sorry no doctors founed')));
@@ -44,5 +43,10 @@ class HomeCubit extends Cubit<HomeState> {
     return specializationDataList
         ?.firstWhere((element) => element?.id == specializationId)
         ?.doctorsList;
+  }
+
+  setupSpecializationClick(int index) {
+    selectedSpecializationInedx = index;
+    getDoctorsList(specializationId: index);
   }
 }

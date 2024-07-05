@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:med_voy/core/utilities/set_error.dart';
 import 'package:med_voy/core/utilities/set_or_else_state.dart';
-import 'package:med_voy/core/widgets/app_custom_loading.dart';
 import 'package:med_voy/features/home/data/model/home_specialization_response.dart';
 import 'package:med_voy/features/home/logic/home_cubit.dart';
 import 'package:med_voy/features/home/logic/home_state.dart';
-import 'package:med_voy/features/home/presentation/widgets/speciality_list_view.dart';
+import 'package:med_voy/features/home/presentation/widgets/specialization_list/speciality_list_view.dart';
+import 'package:med_voy/features/home/presentation/widgets/specialization_list/speciality_shimmer_loading.dart';
 
 class SpecializationBlocBuilder extends StatelessWidget {
   const SpecializationBlocBuilder({super.key});
@@ -20,7 +20,7 @@ class SpecializationBlocBuilder extends StatelessWidget {
           current is SpecializationError,
       builder: (context, state) {
         return state.maybeWhen(
-          specializationLoading: () => const AppCustomLoading(),
+          specializationLoading: () => setLoading(),
           specializationSuccess: (specializationDataList) {
             return setSuccess(specializationDataList);
           },
@@ -34,4 +34,8 @@ class SpecializationBlocBuilder extends StatelessWidget {
 
 Widget setSuccess(List<SpecializationDataList?>? specializationDataList) {
   return SpecialityListView(specializationDataList: specializationDataList);
+}
+
+Widget setLoading() {
+  return const SpecialityShimmerLoading();
 }
